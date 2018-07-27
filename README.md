@@ -94,4 +94,18 @@ $(document).ready(function(){
 });
 ```
 
+4. Наш функционал по идее расчитан под АДМИНИСТРАТОРА! поэтому нужно не забыть передать права. (Этот момент я заметил не сразу)
 
+Перед строкой:
+```php
+if ($iblockId > 0)
+```
+Вставляем:
+
+```
+$iblockAccessLevel = 'element_read'; 
+$filter = array(
+	'CHECK_PERMISSIONS' => 'Y',
+	'MIN_PERMISSION' => 'R'
+);
+```
