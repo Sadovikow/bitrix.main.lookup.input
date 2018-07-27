@@ -56,12 +56,12 @@ $(document).ready(function(){
                 var html = "";
                 // Скрытие всплывающего окна, если кликнули мимо
                 $(document).mouseup(function (e){ 
-									var div = $(".mli-search-result-games"); // тут указываем ID элемента
-									if (!div.is(e.target) // если клик был не по нашему блоку
-									    && div.has(e.target).length === 0) { // и не по его дочерним элементам
-										div.removeClass('active'); // скрываем его
-									}
-								});
+			var div = $(".mli-search-result-games"); // тут указываем ID элемента
+			if (!div.is(e.target) // если клик был не по нашему блоку
+			    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+				div.removeClass('active'); // скрываем его
+			}
+		});
                 
                 for (var i=0; i < data.length; i++){
                     if(typeof data[i].NAME !== 'undefined'){
